@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevQuiz.Pages.Home"
+             Title="GymUltra">
+
+    <Grid RowSpacing="20" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="logogym.png" HeightRequest="60" HorizontalOptions="Center" />
+
+        <Grid Grid.Row="1" ColumnSpacing="10" RowSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Frame 1 (Treinos) -->
+            <Frame CornerRadius="10" Padding="0" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="treinos.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
+                    <Label Text="Treinos" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTreinosTapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!-- Frame 2 (Calorias) -->
+            <Frame Grid.Column="1" CornerRadius="10" Padding="0" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="calorias.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
+                    <Label Text="Calorias" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Frame 3 (GymPlace) -->
+            <Frame Grid.Row="1" CornerRadius="10" Padding="0" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="gymplace.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
+                    <Label Text="GymPlace" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Frame 4 (GymNap) -->
+            <Frame Grid.Row="1" Grid.Column="1" CornerRadius="10" Padding="0" HasShadow="True">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="gymnap.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
+                    <Label Text="GymNap" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+
+</ContentPage>

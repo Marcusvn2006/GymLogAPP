@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevQuiz.Pages.Login"
+             Title="Login">
+    <ContentPage.Content>
+        <Grid>
+            <!-- Imagem de fundo -->
+            <Image Source="fundinhoimg.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Layout de conteúdo -->
+            <VerticalStackLayout Padding="30" Spacing="20"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Fill"
+                                 BackgroundColor="White"
+                                 Opacity="0.9"
+                                 Margin="20">
+                <!-- Logo -->
+                <Image Source="logogym.png"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       HorizontalOptions="Center" />
+
+                <!-- Label de Título "Login" -->
+                <Label Text="Login"
+                       TextColor="#FF7900"  
+                    FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                    <!-- Campo Email -->
+                    <Frame CornerRadius="10" Padding="0" HasShadow="False" BackgroundColor="White">
+                        <Entry x:Name="emailEntry"
+                           Placeholder="Email"
+                           Keyboard="Email"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           HeightRequest="50" />
+                    </Frame>
+
+                    <!-- Campo Senha -->
+                    <Frame CornerRadius="10" Padding="0" HasShadow="False" BackgroundColor="White">
+                        <Entry x:Name="passwordEntry"
+                           Placeholder="Senha"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           HeightRequest="50" />
+                    </Frame>
+
+                    <!-- Botão Inscrever-se -->
+                    <Button Text="Inscrever-se"
+                        Clicked="OnLoginClicked"
+                        BackgroundColor="#FF7900"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        HorizontalOptions="Fill" />
+
+                    <!-- Label de erro (invisível por padrão) -->
+                    <Label x:Name="resultLabel"
+                       Text="Erro ao tentar fazer login. Tente novamente."
+                       TextColor="Red"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       IsVisible="False" />
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

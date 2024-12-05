@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    BackgroundColor="#CF6300"
+    NavigationPage.HasNavigationBar="False">
+
+ 
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#CF6300" StatusBarStyle="DarkContent" />
+    </ContentPage.Behaviors>
+
+    <Grid>
+  
+        <Image Source="telainicial.png"
+               Aspect="AspectFill"
+               IsEnabled="False" />
+        <ScrollView>
+            <VerticalStackLayout
+                Margin="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="20">
+
+              
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="150"
+                    Source="logogym.png"
+                    BackgroundColor="Transparent" />
+
+             
+                <Label
+                    Margin="30"
+                    FontAttributes="Bold"
+                    FontSize="36"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Seja bem vindo ao GymLog"
+                    TextColor="White" />
+
+              
+                <Grid Padding="20">
+                    
+                    <Frame BackgroundColor="#19242b" CornerRadius="10" Padding="0" HasShadow="True">
+                        <HorizontalStackLayout
+            Spacing="10"
+            Padding="12"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                            <Label 
+                Text="LOGIN"
+                TextColor="#FF7900"  
+                                FontSize="24"
+                FontFamily="Montserrat"
+                FontAttributes="Bold"
+                VerticalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnIniciarTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+
+                <Grid Padding="20">
+                    
+                    <Frame BackgroundColor="#19242b" CornerRadius="10" Padding="0" HasShadow="True">
+                        <HorizontalStackLayout
+            Spacing="10"
+            Padding="12"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                            <Label 
+                Text="REGISTRAR"
+                TextColor="#FF7900"  
+                                FontSize="24"
+                FontFamily="Montserrat"
+                FontAttributes="Bold"
+                VerticalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRegistrarTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
